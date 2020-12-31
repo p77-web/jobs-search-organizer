@@ -1,0 +1,192 @@
+.FollowUpContact,
+.FollowUpInterview {
+	width: 100%;
+	height: auto;
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.FollowUpContact,
+	.FollowUpInterview {
+		width: 45%;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+	.FollowUpContact,
+	.FollowUpInterview {
+		width: 45%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.FollowUpContact,
+	.FollowUpInterview {
+		width: 45%;
+	}
+}
+
+.FollowUpStatus {
+	width: 100%;
+	height: auto;
+}
+
+.StatusForm {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	row-gap: 10px;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.StatusForm {
+		height: 30%;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+	.StatusForm {
+		height: 35%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.StatusForm {
+		display: flex;
+		height: 20%;
+		padding-left: 2em;
+	}
+}
+
+.SubWrapper {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+}
+
+@media (min-width: 767px) {
+	.SubWrapper {
+		flex-direction: row;
+	}
+}
+
+.Details {
+	width: 100%;
+	margin: 5px auto;
+}
+
+@media (min-width: 767px) {
+	.Details {
+		width: 47%;
+	}
+}
+
+.JobFollowUpHeading {
+	position: relative;
+	font-family: myHeaderFont, "Helvetica Neue", Helvetica, Arial, cursive;
+	margin: 1.5rem 0 1rem 0;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: baseline;
+}
+
+.FollowUpParagraph {
+	font-family: myFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0 0 0.5rem;
+	position: relative;
+	font-size: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+	.FollowUpParagraph {
+		font-size: 16px;
+	}
+}
+
+.FollowUpParagraph:hover .FollowUpDetailIcon,
+.JobDescriptionArea:hover .FollowUpDetailIcon {
+	font-size: 2rem;
+	opacity: 1;
+	transition: opacity 0.5s ease-out;
+	-moz-transition: opacity 0.5s ease-out;
+	-webkit-transition: opacity 0.5s ease-out;
+	-o-transition: opacity 0.5s ease-out;
+	cursor: pointer;
+}
+
+.FollowUpParagraph:hover i.small,
+.JobDescriptionArea:hover i.small {
+	position: relative;
+	top: -3px;
+	font-size: 1.2rem;
+	transition: font-size 0.5s ease-out;
+	-moz-transition: font-size 0.5s ease-out;
+	-webkit-transition: font-size 0.5s ease-out;
+	-o-transition: font-size 0.5s ease-out;
+}
+
+.FollowUpDetailIcon {
+	position: absolute;
+	right: 1rem;
+	opacity: 0;
+	transition: opacity 0.5s ease-out;
+	-moz-transition: opacity 0.5s ease-out;
+	-webkit-transition: opacity 0.5s ease-out;
+	-o-transition: opacity 0.5s ease-out;
+}
+
+i.small {
+	border-radius: 50%;
+	font-size: 0.5rem;
+	padding: 0.2rem;
+	transition: font-size 0.5s ease-out;
+	-moz-transition: font-size 0.5s ease-out;
+	-webkit-transition: font-size 0.5s ease-out;
+	-o-transition: font-size 0.5s ease-out;
+}
+
+/* Tooltip */
+.ShowFollowUpInfo[data-tooltip]::after {
+	content: attr(data-tooltip);
+	background: #e3f2fd;
+	color: #039be5;
+	position: absolute;
+	width: auto;
+	font-weight: 700;
+	letter-spacing: 1px;
+	pointer-events: none;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-ms-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+	display: block;
+	font-size: 0.75rem;
+	line-height: 0.5rem;
+	padding: 5px 20px;
+	border-radius: 20px;
+	box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+span.ShowFollowUpInfo[data-tooltip]::after {
+	top: 0;
+	left: -30%;
+}
+
+*[data-tooltip]:hover::after {
+	opacity: 1;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-ms-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}

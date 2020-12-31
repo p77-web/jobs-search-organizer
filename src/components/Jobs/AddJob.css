@@ -1,0 +1,132 @@
+.AddJob {
+	background-color: #948cdf25;
+	display: flex;
+	justify-content: center;
+	height: auto;
+	position: relative;
+}
+
+@media only screen and (min-width: 1200px) {
+	.AddJob {
+		background-image: url("../../assets/svg/light-violet-bg.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: 100% 100%;
+		-moz-background-size: 100% 100%;
+		-o-background-size: 100% 100%;
+		background-size: 100% 100%;
+	}
+}
+
+.AddJobContainer {
+	height: auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-top: 10%;
+	padding-bottom: 3%;
+	position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+	.AddJobContainer {
+		width: 90%;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.AddJobContainer {
+		width: 80%;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.AddJobContainer {
+		width: 70%;
+	}
+}
+
+.AddJobForm {
+	background-color: #ffffff80;
+	border-radius: 10px;
+	box-shadow: 5px 5px 70px rgba(0, 0, 0, 0.5);
+	position: relative;
+	width: 80%;
+	padding: 50px 20px;
+	margin: 50px 0 30px 0;
+	z-index: 10;
+	top: 0;
+	left: 0;
+}
+
+@media only screen and (min-width: 768px) {
+	.AddJobForm {
+		padding: 50px;
+		width: 70%;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.AddJobForm {
+		width: 60%;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.AddJobForm {
+		width: 50%;
+		margin: 0;
+	}
+}
+
+.AddJobForm::after {
+	content: "";
+	background-color: #ffffff80;
+	border-radius: 10px;
+	box-shadow: inset 5px 5px 15px rgba(255, 255, 255, 0.8),
+		inset -5px -5px 15px rgba(255, 255, 255, 0.8),
+		5px 5px 15px rgba(255, 255, 255, 0.7),
+		-5px -5px 15px rgba(255, 255, 255, 0.7), 5px 5px 15px rgba(0, 0, 0, 0.5);
+	position: absolute;
+	background-color: transparent;
+	width: 104%;
+	height: 102%;
+	padding: 30px;
+	left: -2%;
+	top: -1%;
+	z-index: -1;
+}
+
+@media only screen and (min-width: 600px) {
+	.AddJobForm::after {
+		content: "";
+		box-shadow: inset 5px 5px 15px rgba(255, 255, 255, 0.8),
+			inset -5px -5px 15px rgba(255, 255, 255, 0.8),
+			5px 5px 15px rgba(255, 255, 255, 0.7),
+			-5px -5px 15px rgba(255, 255, 255, 0.7),
+			5px 5px 50px rgba(0, 0, 0, 0.5);
+		width: 102%;
+		left: -1%;
+	}
+}
+
+.GridWrapper {
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	height: auto;
+}
+
+@media only screen and (min-width: 768px) {
+	.GridWrapper {
+		display: flex;
+		flex-direction: column;
+		height: 100px;
+		align-content: space-around;
+	}
+}
+
+.MuiGrid-container {
+	height: 50%;
+	margin: 10px;
+}

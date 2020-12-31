@@ -1,0 +1,242 @@
+.Jobs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	min-height: 100vh;
+	padding-top: 5rem;
+	overflow: hidden;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.Jobs {
+		flex-direction: row;
+		overflow: scroll;
+	}
+}
+
+@media (min-width: 601px) and (max-width: 900px) and (orientation: landscape) {
+	.Jobs {
+		flex-direction: row;
+		overflow: scroll;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.Jobs {
+		margin-top: 0;
+	}
+}
+
+.Jobs:before {
+	content: "";
+	background-image: url("../../assets/svg/light-violet-bg.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #948cdf25;
+}
+
+.JobsFilters {
+	height: auto;
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.JobsFilters {
+		margin-bottom: 3rem;
+		width: 100%;
+	}
+}
+
+@media (min-width: 601px) and (max-width: 900px) and (orientation: landscape) {
+	.JobsFilters {
+		margin-bottom: 3rem;
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.JobsFilters {
+		width: 60%;
+		padding-top: 5%;
+	}
+}
+
+.JobsFilters .input-field {
+	margin: 0 auto;
+	width: 75%;
+	margin-bottom: 5%;
+}
+
+.JobsFilters .input-field input:not([type]) {
+	margin: 0 auto;
+	height: 3rem;
+	width: 75%;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.JobsFilters .input-field {
+		width: 80%;
+	}
+}
+
+@media (min-width: 601px) and (max-width: 900px) and (orientation: landscape) {
+	.JobsFilters .input-field {
+		width: 60%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.JobsFilters .input-field {
+		width: 50%;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.JobsFilters .input-field {
+		width: 30%;
+		margin-bottom: 3%;
+	}
+}
+
+.JobsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	width: 90%;
+	margin-bottom: 32px;
+	position: relative;
+	padding-bottom: 30px;
+	overflow-y: scroll;
+	transform: perspective(5000px);
+	transform-style: preserve-3d;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+.JobsContainer::-webkit-scrollbar {
+	display: none;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.JobsContainer {
+		width: 100%;
+		height: 100vh;
+	}
+}
+
+@media (min-width: 601px) and (max-width: 900px) and (orientation: landscape) {
+	.JobsContainer {
+		width: 80%;
+		height: 100vh;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.JobsContainer {
+		width: 70%;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.JobsContainer {
+		width: 60%;
+	}
+}
+
+.NoChosenJobFound {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	height: auto;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.NoChosenJobFound {
+		width: 55%;
+		padding: 0 25px;
+	}
+}
+
+@media (min-width: 601px) and (max-width: 900px) and (orientation: landscape) {
+	.NoChosenJobFound {
+		width: 75%;
+		padding: 0 25px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.NoChosenJobFound {
+		padding-top: 5%;
+		width: 80%;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.NoChosenJobFound {
+		padding-top: 2%;
+		width: 60%;
+	}
+}
+
+.NoChosenJobFound h5 {
+	color: rgb(248, 94, 94);
+}
+
+/* search */
+input[type="search"]:not(.browser-default) {
+	background-color: teal;
+	border-bottom: none;
+	margin: 0;
+}
+
+.MuiInputBase-input {
+	color: #039be5 !important;
+}
+
+input:not([type]) {
+	border: 2px solid #039be5;
+	border-radius: 20px;
+	padding: 0 10px;
+}
+
+input:not([type]):focus:not([readonly]) {
+	background-color: #ebf8ff80;
+	border-bottom: 2px solid #039be5;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	padding: 0 10px;
+}
+
+input:not([type]):hover:not([readonly]) {
+	background-color: #ebf8ff80;
+}
+
+.MuiInput-underline:before,
+.MuiInput-underline:after {
+	border-bottom: 1px solid lightblue !important;
+	transition: none !important;
+}
+
+.MuiInput-underline:hover:not(.Mui-disabled):before {
+	border-bottom: 1px solid lightblue !important;
+}
+
+.MuiInput-underline:hover:not(.Mui-disabled):before {
+	border-bottom: none;
+}

@@ -1,0 +1,59 @@
+.PageNotFoundWrapper {
+	background-image: url("../../../assets/svg/page-not-found.svg");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	-webkit-background-size: 255px 205px;
+	-moz-background-size: 255px 205px;
+	-o-background-size: 255px 205px;
+	background-size: 255px 205px;
+}
+
+.PageNotFoundWrapper:before {
+	content: "";
+	background-image: url(/static/media/light-violet-bg.2dc6b22f.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #948cdf25;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.PageNotFoundWrapper {
+		-webkit-background-size: 255px 205px;
+		-moz-background-size: 255px 205px;
+		-o-background-size: 255px 205px;
+		background-size: 255px 205px;
+	}
+}
+
+@media (min-width: 601px) and (max-width: 767px) and (orientation: landscape) {
+	.PageNotFoundWrapper {
+		-webkit-background-size: 255px 205px;
+		-moz-background-size: 255px 205px;
+		-o-background-size: 255px 205px;
+		background-size: 255px 205px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.PageNotFoundWrapper {
+		-webkit-background-size: auto;
+		-moz-background-size: auto;
+		-o-background-size: auto;
+		background-size: auto;
+	}
+}
+
+.PageNotFound {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}

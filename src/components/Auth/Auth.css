@@ -1,0 +1,315 @@
+.SignInContainer,
+.SignUpContainer {
+	background-repeat: no-repeat;
+	background-size: 295px 165px;
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: scroll;
+}
+
+@media only screen and (min-width: 992px) {
+	.SignInContainer,
+	.SignUpContainer {
+		overflow: hidden;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.SignInContainer {
+		background-image: url("../../assets/svg/green-resume.svg");
+		animation: signInFormAnimation 1s ease;
+		background-position-x: 5%;
+		background-position-y: 90%;
+	}
+
+	.SignUpContainer {
+		background-image: url("../../assets/svg/blue-resume.svg");
+		animation: signUpFormAnimation 1s ease;
+		background-position-x: 95%;
+		background-position-y: 90%;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.SignInContainer {
+		background-image: url("../../assets/svg/green-resume.svg");
+		animation: signInFormAnimation 1s ease;
+		background-position-x: 10%;
+		background-position-y: 90%;
+	}
+
+	.SignUpContainer {
+		background-image: url("../../assets/svg/blue-resume.svg");
+		animation: signUpFormAnimation 1s ease;
+		background-position-x: 90%;
+		background-position-y: 90%;
+	}
+}
+
+@keyframes bgAnimation {
+	0% {
+		background-position-x: -100%;
+	}
+	100% {
+		background-position-x: 50%;
+	}
+}
+
+.SignUpContainer::before {
+	content: "";
+	display: none;
+}
+
+.SignUpContainer::after {
+	content: "";
+	display: none;
+}
+
+@media only screen and (min-width: 992px) {
+	.SignUpContainer::before {
+		height: 100vh;
+		width: 200%;
+		right: 110%;
+		top: 0;
+		position: absolute;
+		background: linear-gradient(to left, #667cc4, rgb(175, 208, 247));
+		z-index: 50;
+		animation: signUpBgAnimation 0.8s ease;
+		overflow: hidden;
+		display: block;
+	}
+
+	.SignUpContainer::after {
+		background-image: url("../../assets/svg/blue-bg.svg");
+		background-repeat: no-repeat;
+		overflow: hidden;
+		height: 150vh;
+		width: 2000px;
+		right: 80%;
+		top: -50%;
+		position: absolute;
+		z-index: 60;
+		animation: signUpWaveBgAnimation 1s ease;
+		overflow-y: hidden;
+		display: block;
+	}
+}
+
+.SignInContainer::before {
+	content: "";
+	display: none;
+}
+
+.SignInContainer::after {
+	content: "";
+	display: none;
+}
+
+@media only screen and (min-width: 992px) {
+	.SignInContainer::before {
+		height: 100vh;
+		width: 200%;
+		left: 105%;
+		top: 0;
+		position: absolute;
+		background: linear-gradient(to right, #32c98a, #86f5d9);
+		z-index: 50;
+		animation: signInBgAnimation 0.8s ease;
+		overflow: hidden;
+		display: block;
+	}
+
+	.SignInContainer::after {
+		background-image: url("../../assets/svg/green-bg.svg");
+		background-repeat: no-repeat;
+		height: 150vh;
+		width: 100%;
+		left: 75%;
+		top: -50%;
+		position: absolute;
+		z-index: 60;
+		animation: signInWaveBgAnimation 1s ease;
+		overflow-y: hidden;
+		display: block;
+	}
+}
+
+.SignInForm,
+.SignUpForm {
+	background-color: #fff;
+	margin: 5rem auto 5px;
+	height: auto;
+	width: 80%;
+	padding: 15px 15px 10px 15px;
+	animation: formAnimation 1s ease;
+	position: relative;
+	box-shadow: 0px 0px 50px 0px #32c98abb;
+	border-radius: 10px;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.SignInForm,
+	.SignUpForm {
+		width: 60%;
+		padding: 20px 25px 10px 25px;
+	}
+
+	.SignUpForm {
+		margin: 30rem auto 10%;
+	}
+
+	.SignInForm {
+		margin: 25rem auto 10%;
+	}
+}
+
+@media (min-width: 601px) and (max-width: 900px) and (orientation: landscape) {
+	.SignInForm,
+	.SignUpForm {
+		width: 50%;
+	}
+	.SignUpForm {
+		margin: 30rem auto 10%;
+	}
+
+	.SignInForm {
+		margin: 25rem auto 10%;
+	}
+}
+
+@media (min-width: 901px) and (max-width: 1000px) and (orientation: landscape) {
+	.SignInForm,
+	.SignUpForm {
+		width: 60%;
+		padding: 20px 25px 10px 25px;
+	}
+
+	.SignUpForm {
+		margin: 10rem auto 2rem;
+		width: 60%;
+		padding: 20px 25px 10px 25px;
+	}
+	.SignInForm {
+		margin: 15rem auto 10rem;
+		width: 60%;
+		padding: 20px 25px 10px 25px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+	.SignInForm,
+	.SignUpForm {
+		margin: 0% auto;
+		width: 60%;
+		padding: 50px 30px 10px 30px;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.SignInForm,
+	.SignUpForm {
+		width: 50%;
+		margin: 5% auto 10%;
+		padding: 50px 30px 20px 30px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.SignInForm,
+	.SignUpForm {
+		margin: 0 auto;
+		width: 40%;
+	}
+}
+
+.SignInForm {
+	box-shadow: 0px 0px 50px 0px #32c98a8f;
+}
+
+.SignUpForm {
+	box-shadow: 0px 0px 50px 0px #6b8bf7;
+}
+
+@keyframes formAnimation {
+	0% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes signInFormAnimation {
+	0% {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes signUpFormAnimation {
+	0% {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes signInBgAnimation {
+	0% {
+		left: -190%;
+	}
+	100% {
+		left: 105%;
+	}
+}
+
+@keyframes signInWaveBgAnimation {
+	0% {
+		left: -150%;
+	}
+	100% {
+		left: 75%;
+	}
+}
+
+@keyframes signUpBgAnimation {
+	0% {
+		right: -190%;
+	}
+	100% {
+		right: 110%;
+	}
+}
+
+@keyframes signUpWaveBgAnimation {
+	0% {
+		right: -150%;
+	}
+	100% {
+		right: 80%;
+	}
+}
+
+.NewAccount {
+	text-align: center;
+}
+
+.NewAccount a {
+	text-decoration: none;
+	color: #32c98a;
+	text-transform: uppercase;
+}

@@ -1,0 +1,67 @@
+@font-face {
+	font-family: myFont;
+	src: url(../family-fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+	font-family: myHeaderFont;
+	src: url(../family-fonts/Gelasio/Gelasio-SemiBold.ttf);
+}
+
+@font-face {
+	font-family: myCardFont;
+	src: url(../family-fonts/Gelasio/Gelasio-Bold.ttf);
+}
+
+html {
+	box-sizing: border-box;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+body {
+	-ms-overflow-style: none;
+}
+
+p {
+	color: #6c6c6f;
+	font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #323233;
+	text-transform: uppercase;
+	font-family: myHeaderFont, serif;
+}
+
+/* site */
+.wrapper {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+/* media */
+@media (max-width: 600px) and (orientation: landscape) {
+}
+
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (min-width: 1200px) {
+}

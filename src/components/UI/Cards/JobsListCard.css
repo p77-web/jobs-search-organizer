@@ -1,0 +1,184 @@
+.Card {
+	width: 180px;
+	height: 250px;
+	margin: 20px 15px;
+	padding: 15px;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	transform: rotateX(45deg) translateY(-50px) translateZ(-100px);
+	box-shadow: 5px 15px 40px rgba(0, 0, 0, 0.2);
+	transition: box-shadow 0.3s ease-in 1.2s, transform 0.4s ease-in 1s;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.Card {
+		min-width: 160px;
+		width: 180px;
+	}
+}
+
+@media (min-width: 601px) and (max-width: 767px) and (orientation: landscape) {
+	.Card {
+		min-width: 180px;
+		width: 200px;
+	}
+}
+
+.Card:hover {
+	transform: rotateX(0) translateY(50px) translateZ(0px);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+	transition: box-shadow 0.3s ease-in, transform 0.4s ease-in;
+}
+
+.Card:hover .JobHeading {
+	transform: rotateX(0) translate(-50%, -50%);
+	transition: transform 0.4s ease-in;
+}
+
+.JobButtons button {
+	border-radius: 10px;
+	padding: 5px 15px;
+	background-color: transparent;
+	transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+.JobButtons button:focus {
+	outline: none;
+}
+
+.JobButtons .JobIcon {
+	box-shadow: inset 0 0 1em rgba(0, 170, 170, 0.5), 0 0 1em #00a8a880;
+	border: #00dddd solid 2px;
+	color: #00dddd;
+}
+
+.JobIcon:hover {
+	background-color: #00dddd80;
+	box-shadow: inset 0 0 0 rgba(0, 170, 170, 0.5),
+		0 0 1.5em rgba(0, 170, 170, 0.7);
+	color: #00f7ff;
+}
+
+.JobButtons .DeleteJobIcon {
+	box-shadow: inset 0 0 1em rgba(251, 81, 81, 0.4),
+		0 0 1em rgba(251, 81, 81, 0.4);
+	border: #fb5454 solid 2px;
+	color: #fb5454;
+}
+
+.DeleteJobIcon:hover {
+	background-color: #fb545480;
+	box-shadow: inset 0 0 0 rgba(251, 81, 81, 0.4),
+		0 0 1.5em rgba(251, 81, 81, 0.6);
+	color: #ff6b6b;
+}
+
+.JobHeading {
+	font-family: myCardFont, "Helvetica Neue", Helvetica, Arial, cursive;
+	display: block;
+	left: 50%;
+	overflow: hidden;
+	position: absolute;
+	text-overflow: ellipsis;
+	top: 20%;
+	white-space: nowrap;
+	max-width: 80%;
+	transform: rotateX(25deg) translate(-50%, -50%);
+	transition: transform 1s ease-in 0.5s;
+}
+
+.JobParagraph {
+	font-family: myFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	display: block;
+	left: 50%;
+	overflow: hidden;
+	position: absolute;
+	text-overflow: ellipsis;
+	top: 40%;
+	white-space: nowrap;
+	max-width: 80%;
+	transform: translate(-50%, -50%);
+}
+
+.Wave {
+	background: url("../../../assets/svg/wave.svg");
+	width: 1600px;
+	height: 40%;
+	bottom: -40%;
+	left: 0;
+	position: absolute;
+	transition: bottom 0.8s ease-in 0.3s;
+	animation: wave 25s linear infinite;
+}
+
+.JobButtons {
+	background-color: transparent;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	bottom: -30%;
+	left: 0;
+	transition: bottom 0.8s ease-in 0.3s;
+}
+
+@keyframes wave {
+	0% {
+		margin-left: 0px;
+	}
+	100% {
+		margin-left: -1400px;
+	}
+}
+
+.Card:hover .JobButtons,
+.Card:hover .Wave {
+	bottom: 0;
+	transition: bottom 0.8s ease-in 0.3s;
+}
+
+.NoStatus {
+	background-color: #f1f1f1;
+}
+
+.NoAnswer {
+	background-color: #f3eccc;
+}
+
+.Interview {
+	background-color: #c1e7fd;
+}
+
+.Accepted {
+	background-color: #bef8d6;
+}
+
+.Refused {
+	background-color: #f7e4de;
+}
+
+.NoAnswer h6,
+.NoStatus h6,
+.Interview h6,
+.Accepted h6,
+.Refused h6 {
+	color: #414141;
+	color: #5b81ae;
+	font-size: 22px;
+	font-weight: 900;
+}
+
+.NoAnswer p,
+.NoStatus p,
+.Interview p,
+.Accepted p,
+.Refused p {
+	color: #4974a5;
+	font-size: 17px;
+	font-weight: 600;
+}

@@ -1,0 +1,619 @@
+.JobDetailsWrapper {
+	background-image: url("../../assets/svg/light-violet-bg.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background-color: #473abd15;
+}
+
+.JobDetailsWrapper .FollowUpWrapper {
+	overflow-y: scroll;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.JobDetailsWrapper {
+		overflow-y: scroll;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+	.JobDetailsWrapper {
+		overflow-y: scroll;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.JobDetailsWrapper {
+		overflow-y: scroll;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.JobDetailsWrapper {
+		background-image: url("../../assets/svg/career.svg"),
+			url("../../assets/svg/loupe.svg");
+		background-repeat: no-repeat;
+		background-position: 95% 93%, 5% 45%;
+		-webkit-background-size: 400px 215px, auto;
+		-moz-background-size: 400px 215px, auto;
+		-o-background-size: 400px 215px, auto;
+		background-size: 400px 215px, auto;
+	}
+}
+
+.JobDetailsButtons {
+	background-color: rgb(52, 58, 64, 0.9);
+	border-radius: 20px;
+	border: 1px solid rgb(52, 58, 64, 0.5);
+	box-shadow: inset 2px 2px 10px 5px rgba(52, 58, 64, 0.5);
+	height: auto;
+	left: 50%;
+	padding-top: 25px;
+	padding-bottom: 10px;
+	position: absolute;
+	top: 40px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	transform: translateX(-50%);
+	z-index: 100;
+	-webkit-clip-path: circle(12px at 95% 19%);
+	clip-path: circle(12px at 95% 19%);
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.JobDetailsButtons {
+		-webkit-clip-path: circle(12px at 97% 30%);
+		clip-path: circle(12px at 97% 30%);
+	}
+}
+
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+	.JobDetailsButtons {
+		-webkit-clip-path: circle(12px at 97% 40%);
+		clip-path: circle(12px at 97% 40%);
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.JobDetailsButtons {
+		background-color: rgb(52, 58, 64, 0.2);
+		width: 60%;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.JobDetailsButtons {
+		width: 60%;
+	}
+}
+
+.JobDetailsButtons .input-field {
+	margin-top: 1.5rem;
+}
+
+.JobDetailsButtons span {
+	float: right;
+	color: white;
+	font-weight: bold;
+	position: absolute;
+	right: 0.3rem;
+	top: 1.4rem;
+	-webkit-transition: color 0.5s;
+	transition: color 0.5s;
+	transform: rotate(0deg) translate(0%);
+	transition: transform 0.5s ease-in-out;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.JobDetailsButtons span {
+		right: 0.25rem;
+		top: 1.3rem;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+	.JobDetailsButtons span {
+		right: 0.5rem;
+		top: 1.9rem;
+	}
+}
+
+.JobDetailsButtons:hover {
+	-webkit-clip-path: circle(75%);
+	clip-path: circle(75%);
+}
+
+.JobDetailsButtons:hover span {
+	transform: rotate(45deg) translate(-5%);
+	transition: transform 0.5s ease-in-out;
+}
+
+.CompanyWrapper,
+.JobWrapper,
+.DocsTypeWrapper,
+.FollowUpWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	position: relative;
+	width: 100%;
+	transform: perspective(2000px);
+	transform-style: preserve-3d;
+}
+
+.Theme {
+	border-radius: 10px;
+	height: auto;
+	left: 50%;
+	padding: 20px 50px 20px 0px;
+	position: absolute;
+	top: 50%;
+	width: 90%;
+	box-shadow: 5px 5px 70px rgba(0, 0, 0, 0.5);
+	animation: showDetailsPortrait 1s ease-out;
+	z-index: 10;
+	transform: translate(-50%, -50%);
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.Theme {
+		width: 65%;
+		transform: translate(-50%, 0%);
+		animation: showDetailsLandscape 1s ease-out;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+	.Theme {
+		width: 55%;
+		transform: translate(-50%, 0%);
+		animation: showDetailsLandscape 1s ease-out;
+	}
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+	.Theme {
+		width: 50%;
+		padding: 50px;
+		transform: translate(-50%, 0%);
+		animation: showDetailsLandscape 1s ease-out;
+	}
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+	.Theme {
+		width: 60%;
+		padding: 50px 40px 50px 30px;
+		animation: details 1s ease-out;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.Theme {
+		transform: translate(-50%, -50%);
+		width: 40%;
+		padding: 30px 40px 30px 0px;
+		animation: details 1s ease-out;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.Theme {
+		width: 25%;
+		padding: 30px 50px 30px 0px;
+		animation: details 1s ease-out;
+	}
+}
+
+.Theme::after {
+	content: "";
+	box-shadow: inset 5px 5px 15px rgba(255, 255, 255, 0.8),
+		inset -5px -5px 15px rgba(255, 255, 255, 0.8),
+		5px 5px 15px rgba(255, 255, 255, 0.7),
+		-5px -5px 15px rgba(255, 255, 255, 0.7);
+	border-radius: 10px;
+	position: absolute;
+	background-color: transparent;
+	width: 102%;
+	height: 104%;
+	left: -1%;
+	top: -2%;
+	z-index: -1;
+}
+
+@keyframes details {
+	0% {
+		top: 25%;
+		left: 25%;
+		transform: scale(0.2) rotateX(90deg) translateZ(-200px);
+	}
+	100% {
+		transform: scale(1) rotateX(0deg) translate(-50%, -50%) translateZ(0px);
+	}
+}
+
+@keyframes showDetailsLandscape {
+	0% {
+		top: 25%;
+		left: -25%;
+		transform: scale(0.2) rotateX(90deg) translateZ(-200px);
+	}
+	100% {
+		transform: scale(1) rotateX(0deg) translate(-50%, 0%) translateZ(0px);
+	}
+}
+
+@keyframes showDetailsPortrait {
+	0% {
+		top: 25%;
+		left: -25%;
+		transform: scale(0.2) rotateX(90deg) translateZ(-200px);
+	}
+	100% {
+		transform: scale(1) rotateX(0deg) translate(-50%, -50%) translateZ(0px);
+	}
+}
+
+.FollowUpWrapper .Theme {
+	width: 90%;
+	top: 80%;
+}
+
+@media only screen and (min-width: 350px) {
+	.FollowUpWrapper .Theme {
+		top: 65%;
+	}
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.FollowUpWrapper .Theme {
+		width: 90%;
+		top: 40%;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+	.FollowUpWrapper .Theme {
+		width: 90%;
+		top: 30%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
+	.FollowUpWrapper .Theme {
+		width: 80%;
+		top: 20%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.FollowUpWrapper .Theme {
+		top: 50%;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.FollowUpWrapper .Theme {
+		width: 50%;
+	}
+}
+
+.FollowUpWrapper .FollowUpDetails {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 100%;
+	padding: 0px 0 0 25px;
+	position: relative;
+	width: 100%;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.FollowUpWrapper .FollowUpDetails {
+		flex-direction: row;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+	.FollowUpWrapper .FollowUpDetails {
+		flex-direction: row;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.FollowUpWrapper .FollowUpDetails {
+		flex-direction: row;
+		padding: 0 25px;
+	}
+}
+
+.CompanyWrapper .CompanyDetails,
+.JobWrapper .JobDetails,
+.DocsTypeWrapper .DocsTypeDetails {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+	.CompanyWrapper .CompanyDetails,
+	.JobWrapper .JobDetails,
+	.DocsTypeWrapper .DocsTypeDetails {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		padding: 0 50px 0 30px;
+		position: relative;
+		width: 100%;
+	}
+}
+
+.DocsTypeDetails h6 {
+	font-size: 18px;
+}
+
+.JobDetailsHeading,
+.Url,
+.FilesHeading {
+	display: block;
+	position: relative;
+	font-family: myHeaderFont, "Helvetica Neue", Helvetica, Arial, cursive;
+	padding: 0 0 0 2rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+
+.FilesHeading {
+	margin: 0.5rem 0 0 2rem;
+}
+
+.JobDetailsHeading:hover .JobDetailIcon,
+.JobDetailsParagraph:hover .JobDetailIcon,
+.Url:hover .JobDetailIcon,
+.JobDescriptionArea:hover .JobDetailIcon,
+.JobFiles:hover .DeleteFileIcon {
+	font-size: 2rem;
+	opacity: 1;
+	transition: opacity 0.5s ease-out;
+	-moz-transition: opacity 0.5s ease-out;
+	-webkit-transition: opacity 0.5s ease-out;
+	-o-transition: opacity 0.5s ease-out;
+	cursor: pointer;
+}
+
+.JobDetailsHeading:hover i.small,
+.JobDetailsParagraph:hover i.small,
+.Url:hover i.small,
+.JobDescriptionArea:hover i.small,
+.JobFiles:hover i.small {
+	position: relative;
+	top: -10px;
+	font-size: 1.2rem;
+	transition: font-size 0.5s ease-out;
+	-moz-transition: font-size 0.5s ease-out;
+	-webkit-transition: font-size 0.5s ease-out;
+	-o-transition: font-size 0.5s ease-out;
+}
+
+.JobFiles:hover i.small {
+	font-size: 1.5rem;
+}
+
+.JobDetailsHeading:hover i.small,
+.Url:hover i.small {
+	top: -8px;
+}
+
+.JobDescriptionArea:hover i.small {
+	top: -12px;
+}
+
+.JobDetailsParagraph {
+	display: block;
+	font-family: myFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding: 0 0 0.5rem 2rem;
+	overflow: hidden;
+	position: relative;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+
+.Url {
+	display: block;
+	font-family: myFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	overflow: hidden;
+	position: relative;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+
+.Url a {
+	line-height: 2;
+}
+
+.JobDocsType {
+	font-family: myFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0 1.25rem 0 0;
+}
+
+.FilesWrapper .FilesDetails {
+	padding: 0 50px 0 30px;
+}
+
+.FilesWrapper {
+	position: relative;
+	height: 100px;
+	width: 100%;
+	overflow-y: auto;
+}
+
+@media only screen and (min-width: 768px) {
+	.FilesWrapper {
+		height: 200px;
+		width: 100%;
+		overflow-y: auto;
+	}
+}
+
+.FilesDetails:nth-child(1) {
+	padding-top: 15px;
+}
+
+.JobFiles {
+	display: flex;
+	justify-content: space-between;
+}
+
+.JobFiles a {
+	text-decoration: none;
+}
+
+.JobDetailsSpan {
+	font-family: myFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+}
+
+.JobDescriptionArea {
+	font-family: myFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	width: 100%;
+	position: relative;
+	left: 1%;
+	max-height: 150px;
+	padding-left: 2rem;
+	min-height: 50px;
+	white-space: pre-wrap;
+	overflow-y: scroll;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+.JobDescriptionArea::-webkit-scrollbar {
+	display: none;
+}
+
+.JobDetailIcon,
+.DeleteFileIcon {
+	position: absolute;
+	opacity: 0;
+	width: 24px;
+	transition: opacity 0.5s ease-out;
+	-moz-transition: opacity 0.5s ease-out;
+	-webkit-transition: opacity 0.5s ease-out;
+	-o-transition: opacity 0.5s ease-out;
+}
+
+.DeleteFileIcon {
+	right: 1rem;
+}
+
+.JobDetailIcon {
+	left: 0rem;
+}
+
+i.small {
+	border-radius: 50%;
+	color: #343a40;
+	font-size: 0.5rem;
+	padding: 0.2rem;
+	transition: font-size 0.5s ease-out;
+	-moz-transition: font-size 0.5s ease-out;
+	-webkit-transition: font-size 0.5s ease-out;
+	-o-transition: font-size 0.5s ease-out;
+}
+
+.ProgressBarWrapper {
+	height: 10px;
+	font-size: 0;
+	width: 75%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.AddFileDetailsForm {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 10px 0px 0px 50px;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.AddFileDetailsForm {
+		margin: 10px 0px 0px 50px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+	.AddFileDetailsForm {
+		margin: 10px 0px 0px 60px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.AddFileDetailsForm {
+		margin: 10px 0px 0px 50px;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.AddFileDetailsForm {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}
+
+.AddFileDetailsForm .input-field {
+	width: 130%;
+	margin: 0;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.AddFileDetailsForm .input-field {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+	.AddFileDetailsForm .input-field {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+@media only screen and (min-width: 350px) {
+	.AddFileDetailsForm .input-field {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.AddFileDetailsForm .input-field {
+		width: 100%;
+		margin: 0;
+	}
+}
