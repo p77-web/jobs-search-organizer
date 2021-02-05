@@ -24,7 +24,7 @@ const Navigation = () => {
 				<div className="container-fluid">
 					<NavLink to="/">
 						<Navbar.Brand>
-							<span>Logo</span> Here
+							<span className="Logo"></span>
 						</Navbar.Brand>
 					</NavLink>
 					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
