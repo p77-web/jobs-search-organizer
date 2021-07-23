@@ -62,7 +62,7 @@ const Inputs = ({
 
 		case "textarea":
 			return (
-				<>
+				<div>
 					<label htmlFor={id}>{labelText}</label>
 					<TextareaAutosize
 						className="materialize-textarea"
@@ -72,7 +72,7 @@ const Inputs = ({
 						rowsMax={5}
 						onChange={handleChange}
 					></TextareaAutosize>
-				</>
+				</div>
 			);
 
 		default:

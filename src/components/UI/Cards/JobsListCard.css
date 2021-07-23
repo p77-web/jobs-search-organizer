@@ -26,7 +26,7 @@
 }
 
 .Card:hover {
-	transform: rotateX(0) translateY(50px) translateZ(0px);
+	transform: rotateX(0) translateY(30px) translateZ(0px);
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 	transition: box-shadow 0.3s ease-in, transform 0.4s ease-in;
 }
@@ -37,6 +37,7 @@
 }
 
 .JobButtons button {
+	margin-bottom: 1.5rem;
 	border-radius: 10px;
 	padding: 5px 15px;
 	background-color: transparent;
@@ -101,7 +102,7 @@
 	transform: translate(-50%, -50%);
 }
 
-.Wave {
+/* .Wave {
 	background: url("../../../assets/svg/wave.svg");
 	width: 1600px;
 	height: 40%;
@@ -110,21 +111,27 @@
 	position: absolute;
 	transition: bottom 0.8s ease-in 0.3s;
 	animation: wave 25s linear infinite;
-}
+	z-index: 100;
+} */
 
 .JobButtons {
-	background-color: transparent;
+	background-image: linear-gradient(
+		to top,
+		rgba(0, 0, 0, 0.5) 30%,
+		rgba(0, 0, 0, 0) 100%
+	);
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	display: flex;
 	justify-content: space-evenly;
-	align-items: center;
+	align-items: flex-end;
 	position: absolute;
 	width: 100%;
-	height: 30%;
-	bottom: -30%;
+	height: 50%;
+	bottom: -50%;
 	left: 0;
 	transition: bottom 0.8s ease-in 0.3s;
+	z-index: 100;
 }
 
 @keyframes wave {
@@ -142,24 +149,64 @@
 	transition: bottom 0.8s ease-in 0.3s;
 }
 
+.Card-NoStatus {
+	background-color: #f1f1f1;
+}
+
 .NoStatus {
 	background-color: #f1f1f1;
+}
+
+.Card-NoStatus:hover {
+	box-shadow: -5px -5px 30px -5px #f1f1f1, 5px 5px 30px -5px #f1f1f1;
+}
+
+.Card-NoAnswer {
+	background-color: #f3eccc;
 }
 
 .NoAnswer {
 	background-color: #f3eccc;
 }
 
+.Card-NoAnswer:hover {
+	box-shadow: -5px -5px 30px -5px #f3eccc, 5px 5px 30px -5px #f3eccc;
+}
+
+.Card-Interview {
+	background-color: #c1e7fd;
+}
+
 .Interview {
 	background-color: #c1e7fd;
+}
+
+.Card-Interview:hover {
+	box-shadow: -5px -5px 30px -5px #c1e7fd, 5px 5px 30px -5px #c1e7fd;
+}
+
+.Card-Accepted {
+	background-color: #bef8d6;
 }
 
 .Accepted {
 	background-color: #bef8d6;
 }
 
+.Card-Accepted:hover {
+	box-shadow: -5px -5px 30px -5px #bef8d6, 5px 5px 30px -5px #bef8d6;
+}
+
+.Card-Refused {
+	background-color: #f7e4de;
+}
+
 .Refused {
 	background-color: #f7e4de;
+}
+
+.Card-Refused:hover {
+	box-shadow: -5px -5px 30px -5px #f7e4de, 5px 5px 30px -5px #f7e4de;
 }
 
 .NoAnswer h6,
@@ -167,7 +214,6 @@
 .Interview h6,
 .Accepted h6,
 .Refused h6 {
-	color: #414141;
 	color: #5b81ae;
 	font-size: 22px;
 	font-weight: 900;
@@ -181,4 +227,95 @@
 	color: #4974a5;
 	font-size: 17px;
 	font-weight: 600;
+}
+
+.Card-NoAnswer h6,
+.Card-NoStatus h6,
+.Card-Interview h6,
+.Card-Accepted h6,
+.Card-Refused h6 {
+	color: #5b81ae;
+	font-size: 22px;
+	font-weight: 900;
+}
+
+.Card-NoAnswer p,
+.Card-NoStatus p,
+.Card-Interview p,
+.Card-Accepted p,
+.Card-Refused p {
+	color: #4974a5;
+	font-size: 17px;
+	font-weight: 600;
+}
+
+.Card-NoAnswer::before,
+.Card-NoStatus::before,
+.Card-Interview::before,
+.Card-Accepted::before,
+.Card-Refused::before {
+	content: "";
+	position: absolute;
+	height: 150%;
+	width: 200%;
+	top: 10%;
+	left: 10%;
+	transform: skewX(125deg);
+	z-index: 50;
+}
+
+.Card-NoAnswer::before {
+	background-color: #d8cc96;
+}
+
+.Card-NoStatus::before {
+	background-color: #e2e2e2;
+}
+
+.Card-Interview::before {
+	background-color: #91cdf0;
+}
+
+.Card-Accepted::before {
+	background-color: #93d6af;
+}
+
+.Card-Refused::before {
+	background-color: #f3c6b7;
+}
+
+.Card-NoAnswer::after,
+.Card-NoStatus::after,
+.Card-Interview::after,
+.Card-Accepted::after,
+.Card-Refused::after {
+	content: "";
+	border-radius: 50%;
+	position: absolute;
+	height: 80%;
+	width: 120%;
+	top: 50%;
+	left: -30%;
+	transform: skewX(15deg);
+	z-index: 40;
+}
+
+.Card-NoAnswer::after {
+	background-color: #e6dcb3;
+}
+
+.Card-NoStatus::after {
+	background-color: #dbdbdb;
+}
+
+.Card-Interview::after {
+	background-color: #a3d5f1;
+}
+
+.Card-Accepted::after {
+	background-color: #a6e4bf;
+}
+
+.Card-Refused::after {
+	background-color: #f1d0c6;
 }

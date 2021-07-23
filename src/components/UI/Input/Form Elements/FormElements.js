@@ -343,7 +343,7 @@ const signUpFormElements = {
 			required: true,
 			minLength: 6,
 			maxLength: 8,
-			passwordPattern: false,
+			passwordPattern: true,
 		},
 		valid: false,
 		touched: false,

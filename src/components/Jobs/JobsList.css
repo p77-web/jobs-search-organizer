@@ -122,7 +122,8 @@
 	position: relative;
 	padding-bottom: 30px;
 	overflow-y: scroll;
-	transform: perspective(5000px);
+	perspective: 2000px;
+	transform: perspective(2000px);
 	transform-style: preserve-3d;
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */

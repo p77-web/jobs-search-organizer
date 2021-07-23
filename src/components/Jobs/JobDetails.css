@@ -48,96 +48,276 @@
 	}
 }
 
-.JobDetailsButtons {
+.JobDetailsModal {
 	background-color: rgb(52, 58, 64, 0.9);
 	border-radius: 20px;
 	border: 1px solid rgb(52, 58, 64, 0.5);
 	box-shadow: inset 2px 2px 10px 5px rgba(52, 58, 64, 0.5);
-	height: auto;
+	height: 10rem;
 	left: 50%;
 	padding-top: 25px;
 	padding-bottom: 10px;
 	position: absolute;
-	top: 40px;
-	width: 100%;
+	top: 3rem;
+	width: 98%;
+	pointer-events: auto;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	align-items: center;
 	transform: translateX(-50%);
-	z-index: 100;
-	-webkit-clip-path: circle(12px at 95% 19%);
-	clip-path: circle(12px at 95% 19%);
+	z-index: 10;
 	-webkit-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out 0.1s;
+}
+
+@media (min-width: 385px) and (max-width: 512px) and (orientation: portrait) {
+	.JobDetailsModal {
+		width: 80%;
+	}
+}
+
+@media (min-width: 472px) and (max-width: 579px) and (orientation: portrait) {
+	.JobDetailsModal {
+		width: 65%;
+	}
+}
+
+@media (min-width: 580px) and (max-width: 628px) and (orientation: portrait) {
+	.JobDetailsModal {
+		width: 60%;
+	}
+}
+
+@media (min-width: 629px) and (max-width: 767px) and (orientation: portrait) {
+	.JobDetailsModal {
+		width: 96%;
+	}
 }
 
 @media (max-width: 600px) and (orientation: landscape) {
-	.JobDetailsButtons {
-		-webkit-clip-path: circle(12px at 97% 30%);
-		clip-path: circle(12px at 97% 30%);
+	.JobDetailsModal {
+		background-color: rgb(52, 58, 64, 0.4);
+		height: 6rem;
 	}
 }
 
 @media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
-	.JobDetailsButtons {
-		-webkit-clip-path: circle(12px at 97% 40%);
-		clip-path: circle(12px at 97% 40%);
+	.JobDetailsModal {
+		background-color: rgb(52, 58, 64, 0.4);
+		height: 6rem;
+		top: 4rem;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.JobDetailsModal {
+		background-color: rgb(52, 58, 64, 0.1);
+		height: 7rem;
+		top: 4rem;
+		width: 85%;
 	}
 }
 
 @media only screen and (min-width: 992px) {
-	.JobDetailsButtons {
-		background-color: rgb(52, 58, 64, 0.2);
-		width: 60%;
+	.JobDetailsModal {
+		background-color: rgb(52, 58, 64, 0.1);
+		height: 6rem;
+		top: 4rem;
+		width: 80%;
 	}
 }
 
 @media only screen and (min-width: 1200px) {
-	.JobDetailsButtons {
+	.JobDetailsModal {
 		width: 60%;
 	}
 }
 
-.JobDetailsButtons .input-field {
-	margin-top: 1.5rem;
+.JobDetailsModalClosed {
+	background-color: rgb(52, 58, 64, 0.4);
+	border-radius: 20px;
+	border: 1px solid rgb(52, 58, 64, 0.5);
+	box-shadow: inset 2px 2px 10px 5px rgba(52, 58, 64, 0.5);
+	height: 10rem;
+	left: 50%;
+	padding-top: 25px;
+	padding-bottom: 10px;
+	position: absolute;
+	top: -6rem;
+	width: 98%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	transform: translateX(-50%);
+	z-index: 10;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 
-.JobDetailsButtons span {
-	float: right;
-	color: white;
-	font-weight: bold;
-	position: absolute;
-	right: 0.3rem;
-	top: 1.4rem;
-	-webkit-transition: color 0.5s;
-	transition: color 0.5s;
-	transform: rotate(0deg) translate(0%);
-	transition: transform 0.5s ease-in-out;
+@media (min-width: 385px) and (max-width: 512px) and (orientation: portrait) {
+	.JobDetailsModalClosed {
+		width: 80%;
+	}
+}
+
+@media (min-width: 472px) and (max-width: 579px) and (orientation: portrait) {
+	.JobDetailsModalClosed {
+		width: 65%;
+	}
+}
+
+@media (min-width: 580px) and (max-width: 628px) and (orientation: portrait) {
+	.JobDetailsModalClosed {
+		width: 60%;
+	}
+}
+
+@media (min-width: 629px) and (max-width: 767px) and (orientation: portrait) {
+	.JobDetailsModalClosed {
+		width: 96%;
+	}
 }
 
 @media (max-width: 600px) and (orientation: landscape) {
-	.JobDetailsButtons span {
-		right: 0.25rem;
-		top: 1.3rem;
+	.JobDetailsModalClosed {
+		height: 6rem;
 	}
 }
 
 @media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
-	.JobDetailsButtons span {
-		right: 0.5rem;
-		top: 1.9rem;
+}
+
+@media only screen and (min-width: 768px) {
+	.JobDetailsModalClosed {
+		background-color: rgb(52, 58, 64, 0.1);
+		height: 7rem;
+		width: 85%;
 	}
 }
 
-.JobDetailsButtons:hover {
-	-webkit-clip-path: circle(75%);
-	clip-path: circle(75%);
+@media only screen and (min-width: 992px) {
+	.JobDetailsModalClosed {
+		width: 80%;
+	}
 }
 
-.JobDetailsButtons:hover span {
-	transform: rotate(45deg) translate(-5%);
-	transition: transform 0.5s ease-in-out;
+@media only screen and (min-width: 1200px) {
+	.JobDetailsModalClosed {
+		width: 60%;
+	}
+}
+
+.openDetailsModal {
+	border: 1px solid rgb(52, 58, 64, 0.5);
+	border: 2px solid var(--btn-border-color);
+	box-shadow: 1px 1px 8px 1px rgba(52, 58, 64, 0.3),
+		-1px -1px 8px 1px rgba(52, 58, 64, 0.3);
+	border-radius: 50px;
+	position: absolute;
+	color: var(--btn-border-color);
+	font-size: 1.2rem;
+	font-weight: 600;
+	top: 13rem;
+	left: 50%;
+	margin: 0 auto;
+	height: 2rem;
+	min-width: 6rem;
+	pointer-events: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 20;
+	transform: translateX(-50%);
+	transition: all 0.4s ease-in;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.openDetailsModal {
+		top: 9rem;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+	.openDetailsModal {
+		top: 10rem;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.openDetailsModal {
+		top: 11rem;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.openDetailsModal {
+		top: 10rem;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+}
+
+.openDetailsModal-closed {
+	border: 1px solid rgb(52, 58, 64, 0.5);
+	border: 2px solid var(--btn-border-color);
+	box-shadow: 1px 1px 8px 1px rgba(52, 58, 64, 0.3),
+		-1px -1px 8px 1px rgba(52, 58, 64, 0.3);
+	border-radius: 50px;
+	position: absolute;
+	color: var(--btn-border-color);
+	font-size: 1.2rem;
+	font-weight: 600;
+	top: 56px;
+	left: 50%;
+	margin: 0 auto;
+	height: 2rem;
+	min-width: 6rem;
+	pointer-events: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 20;
+	transform: translateX(-50%);
+	transition: all 0.5s ease-in;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+}
+
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+	.openDetailsModal-closed {
+		top: 64px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.openDetailsModal-closed {
+		top: 64px;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (min-width: 1200px) {
+}
+
+.material-icons-opened {
+	transform: rotateZ(180deg);
+	transition: transform 0.4s ease-in;
+}
+
+.material-icons-closed {
+	transform: rotateZ(0deg);
+	transition: transform 0.6s ease-in;
+}
+
+.JobDetailsModal .input-field,
+.JobDetailsModalClosed .input-field {
+	margin-top: 0rem;
 }
 
 .CompanyWrapper,
@@ -382,6 +562,16 @@
 	width: 100%;
 }
 
+.CompanyDetails .JobDetailsHeading,
+.JobDetails .JobDetailsHeading,
+.FollowUpContact .JobFollowUpHeading,
+.FollowUpInterview .JobFollowUpHeading,
+.FollowUpStatus .JobFollowUpHeading {
+	color: #5b81ae;
+	font-size: 18px;
+	font-weight: 600;
+}
+
 .FilesHeading {
 	margin: 0.5rem 0 0 2rem;
 }
@@ -403,7 +593,7 @@
 .JobDetailsHeading:hover i.small,
 .JobDetailsParagraph:hover i.small,
 .Url:hover i.small,
-.JobDescriptionArea:hover i.small,
+/* .JobDescriptionArea:hover i.small, */
 .JobFiles:hover i.small {
 	position: relative;
 	top: -10px;
@@ -414,6 +604,11 @@
 	-o-transition: font-size 0.5s ease-out;
 }
 
+.foundOn,
+.appliedOn {
+	font-size: 10px;
+}
+
 .JobFiles:hover i.small {
 	font-size: 1.5rem;
 }
@@ -421,10 +616,6 @@
 .JobDetailsHeading:hover i.small,
 .Url:hover i.small {
 	top: -8px;
-}
-
-.JobDescriptionArea:hover i.small {
-	top: -12px;
 }
 
 .JobDetailsParagraph {
@@ -450,6 +641,7 @@
 
 .Url a {
 	line-height: 2;
+	color: #5b81ae;
 }
 
 .JobDocsType {
@@ -470,7 +662,8 @@
 
 @media only screen and (min-width: 768px) {
 	.FilesWrapper {
-		height: 200px;
+		height: auto;
+		max-height: 200px;
 		width: 100%;
 		overflow-y: auto;
 	}
@@ -495,6 +688,7 @@
 }
 
 .JobDescriptionArea {
+	color: #5b81ae;
 	font-family: myFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	width: 100%;
 	position: relative;
@@ -506,6 +700,11 @@
 	overflow-y: scroll;
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
+}
+
+.CompanyDetails .JobDescriptionArea:hover i.small,
+.JobDetails .JobDescriptionArea:hover i.small {
+	top: -12px;
 }
 
 .JobDescriptionArea::-webkit-scrollbar {

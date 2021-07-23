@@ -19,7 +19,7 @@ const JobsListCard = ({ job }) => {
 	const jobContainerTheme = [];
 	let jobStatus = StatusSwitch(job.status);
 
-	jobContainerTheme.push("Card", jobStatus);
+	jobContainerTheme.push("Card", `Card-${jobStatus}`);
 	return (
 		<div className={jobContainerTheme.join(" ")}>
 			<h6 className="JobHeading">{job.companyName}</h6>

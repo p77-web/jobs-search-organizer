@@ -22,6 +22,10 @@ const IsSignedOut = () => {
 				<NavLink
 					className="nav-link"
 					to="/signup"
+					activeClassName="selectedLink"
+					activeStyle={{
+						color: "#3abb47",
+					}}
 					onClick={delaySignUp}
 				>
 					Sign up
@@ -31,6 +35,10 @@ const IsSignedOut = () => {
 				<NavLink
 					className="nav-link"
 					to="/signin"
+					activeClassName="selectedLink"
+					activeStyle={{
+						color: "#3abb47",
+					}}
 					onClick={delaySignIn}
 				>
 					Sign In

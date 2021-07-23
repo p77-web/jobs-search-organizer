@@ -1,5 +1,6 @@
 :root {
-	--secondary-color: #d6c073;
+	--primary-color: #3abb47;
+	--secondary-color: #cdcaee;
 }
 
 /* header */
@@ -48,17 +49,16 @@
 
 .navbar-collapse {
 	position: absolute;
-	top: 100%;
-	height: 100%;
+	top: 150%;
 	width: 100%;
 	left: 0;
 }
 
 @media only screen and (min-width: 768px) {
 	.navbar-collapse {
+		position: relative;
 		top: 0;
 		width: 80%;
-		left: 20%;
 		padding-right: 2rem;
 	}
 }
@@ -95,21 +95,30 @@
 	background-size: cover;
 }
 
+.navbar-dark .navbar-toggler {
+	color: var(--secondary-color);
+	border-color: var(--secondary-color);
+}
+
 .navbar-toggler:focus {
 	outline: none;
-	background-color: var(--secondary-color);
+	background-color: transparent;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
 	color: var(--secondary-color);
 }
 
+.navbar-dark .navbar-nav .nav-link:focus {
+	color: var(--secondary-color);
+}
+
 .navbar-expand-md .navbar-nav .dropdown-menu {
-	border-top: 3px solid var(--secondary-color);
+	border-top: 3px solid var(--primary-color);
 }
 
 .dropdown-item:hover {
-	background-color: var(--secondary-color);
+	background-color: var(--primary-color);
 	color: #fff;
 }
 
@@ -120,11 +129,19 @@ nav {
 	border: none;
 }
 
+nav ul a:hover {
+	background-color: transparent;
+}
+
+:focus {
+	outline: none;
+}
+
 .shrink {
 	padding-top: 0;
 	padding-bottom: 0;
 	background-color: #212529;
-	padding: 0.2rem 1rem;
+	/* padding: 0.2rem 1rem; */
 }
 
 /* large devices */
@@ -150,7 +167,8 @@ nav {
 	}
 
 	.navbar-nav {
-		border-top: 3px solid var(--secondary-color);
+		border-top: 3px solid var(--primary-color);
+		border-bottom: 3px solid var(--primary-color);
 		color: #fff;
 		z-index: 1;
 		background-color: rgba(58, 58, 58, 0.9);
@@ -166,7 +184,7 @@ nav {
 /* mobile view */
 @media (max-width: 500px) {
 	.navbar-nav {
-		border-top: 3px solid var(--secondary-color);
+		border-top: 3px solid var(--primary-color);
 		color: #fff;
 		z-index: 1;
 	}

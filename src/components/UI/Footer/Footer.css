@@ -1,0 +1,51 @@
+:root {
+	--primary-color: #3abb47;
+	--secondary-color: #cdcaee;
+}
+
+.Footer {
+	background-color: rgba(0, 0, 0, 0.7);
+	height: 7vh;
+	width: 100%;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	bottom: 0;
+	border-top: 2px solid var(--primary-color);
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.Footer {
+		height: 10vh;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+	.Footer {
+		height: 8vh;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.Footer {
+		height: 7vh;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.Footer {
+		height: 6vh;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.Footer {
+		height: 5vh;
+	}
+}
+
+.Footer p {
+	margin: 0;
+	color: #f1f1f1;
+}

@@ -7,17 +7,36 @@ const IsSignedIn = () => {
 	return (
 		<ul className="navbar-nav ml-auto">
 			<li className="nav-item">
-				<NavLink className="nav-link" to="/jobs">
+				<NavLink
+					className="nav-link"
+					to="/jobs"
+					activeClassName="selectedLink"
+					activeStyle={{
+						color: "#3abb47",
+					}}
+				>
 					Jobs
 				</NavLink>
 			</li>
 			<li className="nav-item">
-				<NavLink className="nav-link" to="/newjob">
+				<NavLink
+					className="nav-link"
+					to="/newjob"
+					activeClassName="selectedLink"
+					activeStyle={{
+						color: "#3abb47",
+					}}
+				>
 					New job
 				</NavLink>
 			</li>
 			<li className="nav-item">
-				<NavLink className="nav-link" to="/" onClick={() => signOut()}>
+				<NavLink
+					className="nav-link"
+					to="/"
+					activeClassName="selectedLink"
+					onClick={() => signOut()}
+				>
 					Logout
 				</NavLink>
 			</li>

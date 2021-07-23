@@ -28,6 +28,20 @@
 	}
 }
 
+.FollowUpInterview .JobDescriptionArea {
+	left: -8%;
+}
+
+@media only screen and (min-width: 768px) {
+	.FollowUpInterview .JobDescriptionArea {
+		left: 1%;
+	}
+}
+
+.FollowUpInterview .JobDescriptionArea .FollowUpDetailIcon {
+	left: -1rem;
+}
+
 .FollowUpStatus {
 	width: 100%;
 	height: auto;
@@ -103,6 +117,7 @@
 	margin: 0 0 0.5rem;
 	position: relative;
 	font-size: 15px;
+	color: #5b81ae;
 }
 
 @media only screen and (min-width: 768px) {
@@ -125,7 +140,7 @@
 .FollowUpParagraph:hover i.small,
 .JobDescriptionArea:hover i.small {
 	position: relative;
-	top: -3px;
+	top: 0px;
 	font-size: 1.2rem;
 	transition: font-size 0.5s ease-out;
 	-moz-transition: font-size 0.5s ease-out;
@@ -135,7 +150,8 @@
 
 .FollowUpDetailIcon {
 	position: absolute;
-	right: 1rem;
+	/* right: 1rem; */
+	left: -3rem;
 	opacity: 0;
 	transition: opacity 0.5s ease-out;
 	-moz-transition: opacity 0.5s ease-out;
@@ -179,7 +195,7 @@ i.small {
 
 span.ShowFollowUpInfo[data-tooltip]::after {
 	top: 0;
-	left: -30%;
+	right: 10%;
 }
 
 *[data-tooltip]:hover::after {

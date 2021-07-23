@@ -30,3 +30,7 @@ yarn-error.log*
 /src/components/App.test.js
 
 /.vscode
+
+/package-local.json
+
+/src/assets/pictures

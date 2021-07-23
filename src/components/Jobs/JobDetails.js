@@ -39,6 +39,7 @@ const JobDetailed = (props) => {
 	const [formFile, setFormFile] = useState(null);
 	const [isFileFormValid, setIsFileFormValid] = useState(false);
 	const [progress, setProgress] = useState(null);
+	const [isOpen, openDetailsModal] = useState(false);
 
 	const { addJobFormElements } = { ...FormElements };
 
@@ -280,35 +281,82 @@ const JobDetailed = (props) => {
 
 		const jobElementsDetails = (
 			<>
-				<div className="JobDetailsButtons">
-					<span>
-						<i className="material-icons">add</i>
+				{isOpen ? (
+					<span
+						className="openDetailsModal"
+						onClick={() => openDetailsModal(!isOpen)}
+					>
+						Less{" "}
+						<i className="material-icons material-icons-opened">
+							expand_more
+						</i>
 					</span>
-					<FollowUpButton
-						textMessage="Company"
-						toggleDetails={() => {
-							dispatch({ type: DETAILS_ACTIONS.COMPANY });
-						}}
-					/>
-					<FollowUpButton
-						textMessage="Job"
-						toggleDetails={() => {
-							dispatch({ type: DETAILS_ACTIONS.JOB });
-						}}
-					/>
-					<FollowUpButton
-						textMessage="Docs&Type"
-						toggleDetails={() => {
-							dispatch({ type: DETAILS_ACTIONS.DOCS_TYPE });
-						}}
-					/>
-					<FollowUpButton
-						textMessage="Follow Up"
-						toggleDetails={() => {
-							dispatch({ type: DETAILS_ACTIONS.FOLLOW_UP });
-						}}
-					/>
-				</div>
+				) : (
+					<span
+						className="openDetailsModal openDetailsModal-closed"
+						onClick={() => openDetailsModal(!isOpen)}
+					>
+						More{" "}
+						<i className="material-icons material-icons-closed">
+							expand_more
+						</i>
+					</span>
+				)}
+				{isOpen ? (
+					<div className="JobDetailsModal">
+						<FollowUpButton
+							textMessage="Company"
+							toggleDetails={() => {
+								dispatch({ type: DETAILS_ACTIONS.COMPANY });
+							}}
+						/>
+						<FollowUpButton
+							textMessage="Job"
+							toggleDetails={() => {
+								dispatch({ type: DETAILS_ACTIONS.JOB });
+							}}
+						/>
+						<FollowUpButton
+							textMessage="Docs&Type"
+							toggleDetails={() => {
+								dispatch({ type: DETAILS_ACTIONS.DOCS_TYPE });
+							}}
+						/>
+						<FollowUpButton
+							textMessage="Follow Up"
+							toggleDetails={() => {
+								dispatch({ type: DETAILS_ACTIONS.FOLLOW_UP });
+							}}
+						/>
+					</div>
+				) : (
+					<div className="JobDetailsModalClosed">
+						<FollowUpButton
+							textMessage="Company"
+							toggleDetails={() => {
+								dispatch({ type: DETAILS_ACTIONS.COMPANY });
+							}}
+						/>
+						<FollowUpButton
+							textMessage="Job"
+							toggleDetails={() => {
+								dispatch({ type: DETAILS_ACTIONS.JOB });
+							}}
+						/>
+						<FollowUpButton
+							textMessage="Docs&Type"
+							toggleDetails={() => {
+								dispatch({ type: DETAILS_ACTIONS.DOCS_TYPE });
+							}}
+						/>
+						<FollowUpButton
+							textMessage="Follow Up"
+							toggleDetails={() => {
+								dispatch({ type: DETAILS_ACTIONS.FOLLOW_UP });
+							}}
+						/>
+					</div>
+				)}
 				{/* Company */}
 				<div className="JobDetailsWrapper">
 					{details.companyDetails ? (
@@ -550,7 +598,10 @@ const JobDetailed = (props) => {
 										className="JobDetailsParagraph ShowInfo"
 										data-tooltip="Found on"
 									>
-										{foundOn}
+										{foundOn}{" "}
+										<span className="foundOn">
+											(found on)
+										</span>
 										<span
 											className="JobDetailIcon ShowInfo"
 											data-tooltip="Update"
@@ -579,7 +630,10 @@ const JobDetailed = (props) => {
 										className="JobDetailsParagraph ShowInfo"
 										data-tooltip="Applied on"
 									>
-										{appliedOn}
+										{appliedOn}{" "}
+										<span className="appliedOn">
+											(applied on)
+										</span>
 										<span
 											className="JobDetailIcon ShowInfo"
 											data-tooltip="Update"

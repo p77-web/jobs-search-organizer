@@ -10,6 +10,7 @@ import JobContextProvider from "../contexts/JobContext/JobContext";
 import JobsPage from "./Home/JobsPage";
 import JobDetails from "./Jobs/JobDetails";
 import PageNotFound from "./Errors/PageNotFound/PageNotFound";
+import Footer from "./UI/Footer/Footer";
 
 function App() {
 	return (
@@ -28,6 +29,7 @@ function App() {
 							<Route path="*" component={PageNotFound} />
 						</Switch>
 					</JobContextProvider>
+					<Footer />
 				</AuthContextProvider>
 			</BrowserRouter>
 		</div>
