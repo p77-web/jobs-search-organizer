@@ -97,14 +97,14 @@
 
 @media (max-width: 600px) and (orientation: landscape) {
 	.JobDetailsModal {
-		background-color: rgb(52, 58, 64, 0.4);
+		background-color: rgb(52, 58, 64, 0.9);
 		height: 6rem;
 	}
 }
 
 @media (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
 	.JobDetailsModal {
-		background-color: rgb(52, 58, 64, 0.4);
+		background-color: rgb(52, 58, 64, 0.9);
 		height: 6rem;
 		top: 4rem;
 	}
@@ -112,7 +112,6 @@
 
 @media only screen and (min-width: 768px) {
 	.JobDetailsModal {
-		background-color: rgb(52, 58, 64, 0.1);
 		height: 7rem;
 		top: 4rem;
 		width: 85%;
@@ -121,15 +120,27 @@
 
 @media only screen and (min-width: 992px) {
 	.JobDetailsModal {
-		background-color: rgb(52, 58, 64, 0.1);
 		height: 6rem;
 		top: 4rem;
 		width: 80%;
 	}
 }
 
+@media (min-width: 1024px) and (orientation: landscape) {
+	.JobDetailsModal {
+		background-color: rgb(52, 58, 64, 0.9);
+	}
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+	.JobDetailsModal {
+		background-color: rgb(52, 58, 64, 0.1);
+	}
+}
+
 @media only screen and (min-width: 1200px) {
 	.JobDetailsModal {
+		background-color: rgb(52, 58, 64, 0.1);
 		width: 60%;
 	}
 }
@@ -191,7 +202,6 @@
 
 @media only screen and (min-width: 768px) {
 	.JobDetailsModalClosed {
-		background-color: rgb(52, 58, 64, 0.1);
 		height: 7rem;
 		width: 85%;
 	}
@@ -203,8 +213,15 @@
 	}
 }
 
+@media (min-width: 1024px) and (orientation: landscape) {
+	.JobDetailsModalClosed {
+		background-color: rgb(52, 58, 64, 0.9);
+	}
+}
+
 @media only screen and (min-width: 1200px) {
 	.JobDetailsModalClosed {
+		background-color: rgb(52, 58, 64, 0.1);
 		width: 60%;
 	}
 }
@@ -220,7 +237,7 @@
 	font-size: 1.2rem;
 	font-weight: 600;
 	top: 13rem;
-	left: 50%;
+	left: 90%;
 	margin: 0 auto;
 	height: 2rem;
 	min-width: 6rem;
@@ -231,6 +248,12 @@
 	z-index: 20;
 	transform: translateX(-50%);
 	transition: all 0.4s ease-in;
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+	.openDetailsModal {
+		left: 80%;
+	}
 }
 
 @media (max-width: 600px) and (orientation: landscape) {
@@ -247,17 +270,28 @@
 
 @media only screen and (min-width: 768px) {
 	.openDetailsModal {
+		left: 85%;
 		top: 11rem;
 	}
 }
 
 @media only screen and (min-width: 992px) {
 	.openDetailsModal {
+		left: 50%;
 		top: 10rem;
 	}
 }
 
+@media (min-width: 1024px) and (orientation: landscape) {
+	.openDetailsModal {
+		left: 70%;
+	}
+}
+
 @media only screen and (min-width: 1200px) {
+	.openDetailsModal {
+		left: 50%;
+	}
 }
 
 .openDetailsModal-closed {
@@ -271,7 +305,7 @@
 	font-size: 1.2rem;
 	font-weight: 600;
 	top: 56px;
-	left: 50%;
+	left: 90%;
 	margin: 0 auto;
 	height: 2rem;
 	min-width: 6rem;
@@ -282,6 +316,12 @@
 	z-index: 20;
 	transform: translateX(-50%);
 	transition: all 0.5s ease-in;
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+	.openDetailsModal-closed {
+		left: 80%;
+	}
 }
 
 @media (max-width: 600px) and (orientation: landscape) {
@@ -295,14 +335,27 @@
 
 @media only screen and (min-width: 768px) {
 	.openDetailsModal-closed {
+		left: 85%;
 		top: 64px;
 	}
 }
 
 @media only screen and (min-width: 992px) {
+	.openDetailsModal-closed {
+		left: 50%;
+	}
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+	.openDetailsModal-closed {
+		left: 70%;
+	}
 }
 
 @media only screen and (min-width: 1200px) {
+	.openDetailsModal-closed {
+		left: 50%;
+	}
 }
 
 .material-icons-opened {
