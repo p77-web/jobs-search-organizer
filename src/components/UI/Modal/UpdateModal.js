@@ -17,9 +17,8 @@ const UpdateModal = ({
 	const { updateJob } = useContext(JobContext);
 	const { addJobFormElements } = { ...FormElements };
 
-	const { form, handleChange, isFormValid } = useJobInputForm(
-		addJobFormElements
-	);
+	const { form, handleChange, isFormValid } =
+		useJobInputForm(addJobFormElements);
 	const modalClasses = isOpen ? "ModalBackdropActive" : "ModalBackdrop";
 	const modalContentClasses = isOpen ? "ModalContentActive" : "ModalContent";
 	const modalTextarea =
@@ -42,6 +41,9 @@ const UpdateModal = ({
 	 */
 	const handleSubmit = (e, key = name, id = jobId) => {
 		e.preventDefault();
+		if (key === "url") {
+			form[name].value = "https://" + form[name].value;
+		}
 		updateJob(key, form[name].value, id);
 		onCloseModal();
 	};

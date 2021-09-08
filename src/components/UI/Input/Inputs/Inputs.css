@@ -9,3 +9,7 @@ input[type="date"]:not(.browser-default) {
 .Invalid {
 	color: #f09898;
 }
+
+.materialize-textarea {
+	max-height: 15rem;
+}
